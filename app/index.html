@@ -1,20 +1,602 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurferCo</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@1,400;1,700&family=Raleway:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-    
 
-    
+<body>
+
+    <header class="header" style="background-image: url('images/header-bg.png');">
+        <div class="container">
+            <div class="header__top-inner">
+                <div class="header__logo">
+                    <a href="#">
+                        <img class="logo" src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__list-item--link" href="#">Доски</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-item--link" href="#">Аксессуары</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-item--link" href="#">Блог</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-item--link" href="#">Технология</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-item--link" href="#">Команда</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-item--link" href="#">Дилеры</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__social-link">
+                    <a class="solcial__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8px"
+                            height="16px">
+                            <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                                d="M3.267,0.365 C3.354,0.312 3.449,0.266 3.553,0.228 C3.648,0.190 3.755,0.156 3.875,0.125 L4.530,-0.001 L4.960,-0.001 L7.988,0.228 L8.000,0.228 L7.690,2.927 L7.678,2.927 L6.009,2.756 L5.961,2.756 L5.794,2.778 L5.734,2.801 L5.544,2.893 C5.504,2.901 5.472,2.920 5.448,2.950 L5.305,3.099 C5.273,3.137 5.246,3.183 5.222,3.236 C5.198,3.282 5.178,3.332 5.162,3.385 C5.146,3.438 5.134,3.495 5.127,3.556 C5.118,3.609 5.115,3.667 5.115,3.728 L5.138,5.420 L7.594,5.444 L7.237,8.120 L5.115,8.199 L5.115,15.988 L5.103,15.999 L1.788,15.999 L1.788,8.131 L-0.000,8.131 L-0.000,5.444 L1.717,5.444 L1.717,5.420 L1.729,5.386 L1.788,2.515 L1.812,2.355 L1.812,2.275 L1.836,2.195 C1.844,2.134 1.860,2.077 1.884,2.023 C1.899,1.970 1.923,1.921 1.955,1.875 C1.987,1.761 2.031,1.658 2.086,1.566 C2.134,1.467 2.194,1.372 2.265,1.281 C2.321,1.196 2.388,1.117 2.468,1.040 C2.539,0.956 2.615,0.880 2.694,0.812 L2.694,0.800 L3.267,0.365 Z" />
+                        </svg>
+                    </a>
+                    <a class="solcial__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px"
+                            height="16px">
+                            <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                                d="M12.908,-0.001 L3.092,-0.001 C1.387,-0.001 -0.000,1.386 -0.000,3.091 L-0.000,6.357 L-0.000,12.908 C-0.000,14.613 1.387,15.999 3.092,15.999 L12.908,15.999 C14.613,15.999 16.000,14.613 16.000,12.908 L16.000,6.357 L16.000,3.091 C16.000,1.386 14.613,-0.001 12.908,-0.001 ZM13.795,1.844 L14.148,1.842 L14.148,2.194 L14.148,4.554 L11.445,4.563 L11.436,1.851 L13.795,1.844 ZM5.716,6.357 C6.229,5.648 7.060,5.183 8.000,5.183 C8.940,5.183 9.771,5.648 10.283,6.357 C10.617,6.820 10.816,7.386 10.816,8.000 C10.816,9.552 9.552,10.815 8.000,10.815 C6.447,10.815 5.184,9.552 5.184,8.000 C5.184,7.386 5.383,6.820 5.716,6.357 ZM14.441,12.908 C14.441,13.753 13.753,14.441 12.908,14.441 L3.092,14.441 C2.246,14.441 1.559,13.753 1.559,12.908 L1.559,6.357 L3.947,6.357 C3.741,6.865 3.625,7.419 3.625,8.000 C3.625,10.411 5.587,12.374 8.000,12.374 C10.412,12.374 12.375,10.411 12.375,8.000 C12.375,7.419 12.258,6.865 12.052,6.357 L14.441,6.357 L14.441,12.908 Z" />
+                        </svg>
+                    </a>
+                    <a class="solcial__link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
+                            height="16px">
+                            <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                                d="M18.400,15.223 L1.600,15.223 C0.936,15.223 0.400,14.686 0.400,14.023 L0.400,2.816 L5.919,7.908 L1.377,14.101 L7.500,9.366 L9.271,11.001 C9.627,11.268 10.003,11.227 9.989,11.227 C10.333,11.229 10.643,11.049 10.746,10.981 L10.719,11.007 C10.814,10.934 10.799,10.947 10.746,10.981 L12.595,9.271 L18.639,14.094 L14.014,7.957 L19.600,2.788 L19.600,14.023 C19.600,14.686 19.063,15.223 18.400,15.223 ZM0.400,2.023 C0.400,1.360 0.936,0.823 1.600,0.823 L18.400,0.823 C19.063,0.823 19.600,1.360 19.600,2.023 L9.994,8.897 L0.400,2.023 Z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="menu-btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="header__title-inner">
+                <h1 class="header__title">Катайся на каждой волне, как будто это твоя последняя</h1>
+                <span>Мы любим движение океана</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="boards">
+        <div class="container">
+            <div class="boards__inner">
+                <div class="boards__slider">
+                    <div class="boards__slider-item">
+                        <div class="boards__images-wrapper">
+                            <div class="board-img__full">
+                                <div class="images__slider">
+                                    <div class="images__slider-item">
+                                        <img src="images/board-1.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-2.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-3.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boadr-img__mini">
+                                <div class="slider-nav">
+                                    <div class="images__slider-item">
+                                        <img src="images/board-1.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-2.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-3.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boards-content">
+                            <h3 class="boards-content-name">
+                                Доски для серфинга JR The Donny Stoker Желтый / зеленый рельс Fade
+                            </h3>
+                            <div class="boards-content-info">
+                                <div class="boards-content-star">
+                                    <div class="rate-star"></div> <span>(52)</span>
+                                </div>
+                                <span class="number-slider">01/25</span>
+                            </div>
+                            <div class="boards-content-tabs">
+                                <div class="tabs">
+                                    <a class="tab active" href="#tab-1">Описание</a>
+                                    <a class="tab" href="#tab-2">Характеристики</a>
+                                    <a class="tab" href="#tab-3">Размеры</a>
+                                </div>
+                                <div class="tab__content">
+                                    <div class="tab__item active-tab" id="tab-1">
+                                        <p class="tab__text">
+                                            Легкое в управлении, не требующее ухода судно для серфинга, которое весело
+                                            для всех, хорошо гребет, очень быстро катится по волне и отлично подходит
+                                            для любого уровня серфинга в зависимости от того, кто на нем катается. Donny
+                                            Stoker - переработанный дизайн первой в истории профессиональной модели
+                                            Stokesys. Супер простая для серфинга и веселая доска. Donny Stoker - это
+                                            доска для полного самовыражения во фрисёрфинге.
+                                        </p>
+                                        <div class="tab__price-box">
+                                            <div class="tab__price">
+                                                $499.99
+                                            </div>
+                                            <a href="#" class="tab__price-btn">Купить сейчас</a>
+                                        </div>
+                                        <div class="boards__link">
+                                            <a href="#">Просмотреть все доски</a>
+                                        </div>
+                                    </div>
+                                    <div class="tab__item" id="tab-2">
+                                        <ul class="tab__text">
+                                            <li>Рекомендуемое давление, psi 15</li>
+                                            <li>Вес доски, кг 8.6</li>
+                                        </ul>
+                                        <div class="tab__price-box">
+                                            <div class="tab__price">
+                                                $499.99
+                                            </div>
+                                            <a href="#" class="tab__price-btn">Купить сейчас</a>
+                                        </div>
+                                        <div class="boards__link">
+                                            <a href="#">Просмотреть все доски</a>
+                                        </div>
+                                    </div>
+                                    <div class="tab__item" id="tab-3">
+                                        <ul class="tab__text">
+                                            <li>Толщина доски, см 15</li>
+                                            <li>Длина доски, см 320</li>
+                                            <li>Ширина доски, см 76</li>
+                                            <li>Вес доски, кг 8.6</li>
+                                        </ul>
+                                        <div class="tab__price-box">
+                                            <div class="tab__price">
+                                                $499.99
+                                            </div>
+                                            <a href="#" class="tab__price-btn">Купить сейчас</a>
+                                        </div>
+                                        <div class="boards__link">
+                                            <a href="#">Просмотреть все доски</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boards__slider-item">
+                        <div class="boards__images-wrapper">
+                            <div class="board-img__full">
+                                <div class="images__slider">
+                                    <div class="images__slider-item">
+                                        <img src="images/board-1.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-2.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-3.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boadr-img__mini">
+                                <div class="slider-nav">
+                                    <div class="images__slider-item">
+                                        <img src="images/board-1.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-2.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-3.png" alt="">
+                                    </div>
+                                    <div class="images__slider-item">
+                                        <img src="images/board-4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boards-content">
+                            <h3 class="boards-content-name">
+                                Доски для серфинга JR The Donny Stoker Желтый / зеленый рельс Fade
+                            </h3>
+                            <div class="boards-content-info">
+                                <div class="boards-content-star">
+                                    <div class="rate-star"></div> <span>(52)</span>
+                                </div>
+                                <span class="number-slider">02/25</span>
+                            </div>
+                            <div class="boards-content-tabs">
+                                <div class="tabs">
+                                    <a class="tab active" href="#tab-4">Описание</a>
+                                    <a class="tab" href="#tab-5">Характеристики</a>
+                                    <a class="tab" href="#tab-6">Размеры</a>
+                                </div>
+                                <div class="tab__content">
+                                    <div class="tab__item active-tab" id="tab-4">
+                                        <p class="tab__text">
+                                            Легкое в управлении, не требующее ухода судно для серфинга, которое весело
+                                            для всех, хорошо гребет, очень быстро катится по волне и отлично подходит
+                                            для любого уровня серфинга в зависимости от того, кто на нем катается. Donny
+                                            Stoker - переработанный дизайн первой в истории профессиональной модели
+                                            Stokesys. Супер простая для серфинга и веселая доска. Donny Stoker - это
+                                            доска для полного самовыражения во фрисёрфинге.
+                                        </p>
+                                        <div class="tab__price-box">
+                                            <div class="tab__price">
+                                                $499.99
+                                            </div>
+                                            <a href="#" class="tab__price-btn">Купить сейчас</a>
+                                        </div>
+                                        <div class="boards__link">
+                                            <a href="#">Просмотреть все доски</a>
+                                        </div>
+                                    </div>
+                                    <div class="tab__item" id="tab-5">
+                                        <ul class="tab__text">
+                                            <li>Рекомендуемое давление, psi 15</li>
+                                            <li>Вес доски, кг 8.6</li>
+                                        </ul>
+                                        <div class="tab__price-box">
+                                            <div class="tab__price">
+                                                $499.99
+                                            </div>
+                                            <a href="#" class="tab__price-btn">Купить сейчас</a>
+                                        </div>
+                                        <div class="boards__link">
+                                            <a href="#">Просмотреть все доски</a>
+                                        </div>
+                                    </div>
+                                    <div class="tab__item" id="tab-6">
+                                        <ul class="tab__text">
+                                            <li>Толщина доски, см 15</li>
+                                            <li>Длина доски, см 320</li>
+                                            <li>Ширина доски, см 76</li>
+                                            <li>Вес доски, кг 8.6</li>
+                                        </ul>
+                                        <div class="tab__price-box">
+                                            <div class="tab__price">
+                                                $499.99
+                                            </div>
+                                            <a href="#" class="tab__price-btn">Купить сейчас</a>
+                                        </div>
+                                        <div class="boards__link">
+                                            <a href="#">Просмотреть все доски</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" style="background-image: url('images/about-bg.png');">
+        <div class="container">
+            <h3 class="about__title">
+                О нас
+            </h3>
+            <div class="about__inner">
+                <div class="about__content">
+                    <div class="about__content-box">
+                        <div class="about__content-title">
+                            Мы - компания Surfers Co.
+                        </div>
+                        <div class="about__content-text">
+                            Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Равным образом начало повседневной работы по формированию позиции способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.
+                        </div>
+                        <a href="#" class="about__content-link">Читать далее</a>
+                    </div>
+                </div>
+                <div class="about__video">
+                    <a class="video__btn" href="https://www.youtube.com/watch?v=IExy8l1v9VE">
+                        <img src="images/video-btn.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="team">
+        <div class="container">
+            <h3 class="team__title">
+                Наша команда
+            </h3>
+            <div class="team__inner">
+                <div class="team-slider__items">
+                    <div class="team-slider__item">
+                        <a href="#">
+                            <div class="author__photo">
+                                <img src="images/team-photo-1.png" alt="">
+                            </div>
+                            <div class="author__name">
+                                Тадж Берроу
+                            </div>
+                            <div class="author__nickname">
+                                @tajamos
+                            </div>
+                            <div class="author__adres">
+                                Yallingup, Australia
+                            </div>
+                        </a>
+                    </div>
+                    <div class="team-slider__item">
+                        <a href="#">
+                            <div class="author__photo">
+                                <img src="images/team-photo-2.png" alt="">
+                            </div>
+                            <div class="author__name">
+                                Малия Мануэль
+                            </div>
+                            <div class="author__nickname">
+                                @maliamanuel
+                            </div>
+                            <div class="author__adres">
+                                Wailua, Hi
+                            </div>
+                        </a>
+                    </div>
+                    <div class="team-slider__item">
+                        <a href="#">
+                            <div class="author__photo">
+                                <img src="images/team-photo-3.png" alt="">
+                            </div>
+                            <div class="author__name">
+                                Ян Уолш
+                            </div>
+                            <div class="author__nickname">
+                                @ian.walsh
+                            </div>
+                            <div class="author__adres">
+                                Maui, Hi
+                            </div>
+                        </a>
+                    </div>
+                    <div class="team-slider__item">
+                        <a href="#">
+                            <div class="author__photo">
+                                <img src="images/team-photo-4.png" alt="">
+                            </div>
+                            <div class="author__name">
+                                Мэйси Каллаган
+                            </div>
+                            <div class="author__nickname">
+                                @macyjanecallaghan
+                            </div>
+                            <div class="author__adres">
+                                San Clemente, CA
+                            </div>
+                        </a>
+                    </div>
+                    <div class="team-slider__item">
+                        <a href="#">
+                            <div class="author__photo">
+                                <img src="images/team-photo-1.png" alt="">
+                            </div>
+                            <div class="author__name">
+                                Тадж Берроу
+                            </div>
+                            <div class="author__nickname">
+                                @tajamos
+                            </div>
+                            <div class="author__adres">
+                                Yallingup, Australia
+                            </div>
+                        </a>
+                    </div>
+                    <div class="team-slider__item">
+                        <a href="#">
+                            <div class="author__photo">
+                                <img src="images/team-photo-2.png" alt="">
+                            </div>
+                            <div class="author__name">
+                                Малия Мануэль
+                            </div>
+                            <div class="author__nickname">
+                                @maliamanuel
+                            </div>
+                            <div class="author__adres">
+                                Wailua, Hi
+                            </div>
+                        </a>
+                    </div>
+                    <div class="team-slider__item">
+                        <a href="#">
+                            <div class="author__photo">
+                                <img src="images/team-photo-3.png" alt="">
+                            </div>
+                            <div class="author__name">
+                                Ян Уолш
+                            </div>
+                            <div class="author__nickname">
+                                @ian.walsh
+                            </div>
+                            <div class="author__adres">
+                                Maui, Hi
+                            </div>
+                        </a>
+                    </div>
+                    <div class="team-slider__item">
+                        <a href="#">
+                            <div class="author__photo">
+                                <img src="images/team-photo-4.png" alt="">
+                            </div>
+                            <div class="author__name">
+                                Мэйси Каллаган
+                            </div>
+                            <div class="author__nickname">
+                                @macyjanecallaghan
+                            </div>
+                            <div class="author__adres">
+                                San Clemente, CA
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section class="blog">
+        <div class="container">
+            <h3 class="blog__title">
+                Последние обновления
+            </h3>
+            <div class="blog__inner">
+                <div class="blog__item">
+                    <div class="blog__img-box">
+                        <img class="blog__img" src="images/blog-1.png" alt="">
+                    </div>
+                    <div class="blog__text">
+                        <a class="blog__name" href="#">
+                            Элли Тернер и Джобе Харрис выиграли чемпионат Британии по серфингу 2020 года
+                        </a>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__img-box">
+                        <img class="blog__img" src="images/blog-2.png" alt="">
+                    </div>
+                    <div class="blog__text">
+                        <a class="blog__name" href="#">
+                            Большая группа серферов вторглась на побережье Ла-Холья-Шорс в Калифорнии с единственной целью.
+                        </a>
+                    </div>
+                </div>
+                <div class="blog__item">
+                    <div class="blog__img-box">
+                        <img class="blog__img" src="images/blog-3.png" alt="">
+                    </div>
+                    <div class="blog__text">
+                        <a class="blog__name" href="#">
+                            Доски для серфинга постоянно развиваются, и существует множество дизайнов досок для самых разных сред.
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog__btn">
+                <a class="blog__link" href="#">Просмотреть все сообщения</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="social">
+        <div class="container">
+            <div class="social__inner">
+                <a class="social__link" href="#">
+                    <img class="instagram__link" src="images/Instagram.png" alt="">
+                </a>
+                <a class="social__link" href="#">
+                    <img class="facebook__link" src="images/Facebook.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__copy">
+                    © 2017 Surfers Co. Design by @lucaalco
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-col">
+                        <div class="footer__col">
+                            <ul class="footer__col-list">
+                                <li>
+                                    <a class="footer__col-link" href="#">О Нас</a>
+                                </li>
+                                <li>
+                                    <a class="footer__col-link" href="#">Доски</a>
+                                </li>
+                                <li>
+                                    <a class="footer__col-link" href="#">Аксессуары</a>
+                                </li>
+                                <li>
+                                    <a class="footer__col-link" href="#">Блог</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__col">
+                            <ul class="footer__col-list">
+                                <li>
+                                    <a class="footer__col-link" href="#">Технология</a>
+                                </li>
+                                <li>
+                                    <a class="footer__col-link" href="#">Команда</a>
+                                </li>
+                                <li>
+                                    <a class="footer__col-link" href="#">Дилеры</a>
+                                </li>
+                                <li>
+                                    <a class="footer__col-link" href="#">Связаться с нами</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__form">
+                        <div class="footer__form-text">
+                            Подписывайтесь на нашу новостную рассылку
+                        </div>
+                        <form>
+                            <input type="text" placeholder="Ваш E-mail">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="16px" height="14px"><path fill-rule="evenodd"  fill="#ffffff"d="M16.000,7.002 C16.000,7.002 16.000,7.003 16.000,7.004 C16.000,7.287 15.885,7.542 15.700,7.724 L15.700,7.724 L9.823,13.724 L9.820,13.721 C9.644,13.893 9.406,13.999 9.143,13.999 C8.601,13.999 8.163,13.552 8.163,13.000 C8.163,12.696 8.296,12.425 8.505,12.241 L12.659,8.000 L0.979,8.000 C0.438,8.000 -0.000,7.552 -0.000,7.000 C-0.000,6.447 0.438,6.000 0.979,6.000 L12.655,6.000 L8.437,1.694 L8.438,1.694 C8.268,1.514 8.163,1.269 8.163,0.999 C8.163,0.447 8.601,-0.001 9.143,-0.001 C9.407,-0.001 9.646,0.107 9.823,0.280 L9.823,0.280 L15.700,6.280 L15.700,6.280 C15.885,6.462 16.000,6.717 16.000,6.999 C16.000,7.000 16.000,7.001 16.000,7.002 Z"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

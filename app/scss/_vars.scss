@@ -1,0 +1,38 @@
+
+
+
+
+@mixin mf400 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+@mixin mf700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+@mixin pdf400 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+@mixin pdf700 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+@mixin rf400 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+@mixin rf600 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+@mixin rf700 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
